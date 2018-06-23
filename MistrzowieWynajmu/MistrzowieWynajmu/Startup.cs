@@ -25,7 +25,7 @@ namespace MistrzowieWynajmu
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddMvc();
-            var dbConnrctionString = @"Server=(localdb)\mssqllocaldb;Database=MistrzowieDB;Trusted_Connection=true;";
+            var dbConnrctionString = @"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\patry\OneDrive\Documents\DBMistrzowie.mdf;Integrated Security=True;Connect Timeout=30";
             services.AddDbContext<DatabaseContext>(options => options.UseSqlServer(dbConnrctionString));
         }
 
